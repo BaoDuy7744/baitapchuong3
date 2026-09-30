@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Danh sách sách</title>
+</head>
+
+<body>
+
+<h1>DANH SÁCH SÁCH</h1>
+
+{% for book in books %}
+
+<p>
+    <a href="/books/{{ book.id }}">
+        {{ book.title }}
+    </a>
+    - {{ book.author }}
+    - {{ book.year }}
+</p>
+
+{% endfor %}
+
+</body>
+</html>

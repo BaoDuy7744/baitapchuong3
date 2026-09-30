@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chi tiết sách</title>
+</head>
+
+<body>
+
+<h1>{{ book.title }}</h1>
+
+<p>Tác giả: {{ book.author }}</p>
+<p>Năm: {{ book.year }}</p>
+<p>Thể loại: {{ book.category }}</p>
+
+{% if book.available %}
+    <p>Trạng thái: Có thể cho mượn</p>
+{% else %}
+    <p>Trạng thái: Không có sẵn</p>
+{% endif %}
+
+<a href="/books">Quay lại</a>
+
+</body>
+</html>
